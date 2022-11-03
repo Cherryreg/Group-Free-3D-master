@@ -48,7 +48,7 @@ class ScannetDetectionDataset(Dataset):
             # self.data_path = os.path.join(data_root, 'scannet_train_detection_data_22')
             # print(self.data_path)
             if split_set == 'train':
-                self.data_path = os.path.join(data_root, 'scannet_train_detection_data_22_copy_2')#copy
+                self.data_path = os.path.join(data_root, 'scannet_train_detection_data_22_a3')#copy
                 print(self.data_path)
             else:
                 self.data_path = os.path.join(data_root, 'scannet_train_detection_data_22')  # random
