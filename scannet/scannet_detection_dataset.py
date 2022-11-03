@@ -45,12 +45,14 @@ class ScannetDetectionDataset(Dataset):
             else:
                 self.data_path = os.path.join(BASE_DIR, '/data2/szh/scannet/scannet_train_detection_data_22')  # random
         else:
-            self.data_path = os.path.join(data_root, 'scannet_train_detection_data_22')
-            print(self.data_path)
-            # if split_set == 'train':
-            #     self.data_path = os.path.join(data_root, 'scannet_train_detection_data_22_copy_2')#copy
-            # else:
-            #     self.data_path = os.path.join(data_root, 'scannet_train_detection_data_22')  # random
+            # self.data_path = os.path.join(data_root, 'scannet_train_detection_data_22')
+            # print(self.data_path)
+            if split_set == 'train':
+                self.data_path = os.path.join(data_root, 'scannet_train_detection_data_22_copy_2')#copy
+                print(self.data_path)
+            else:
+                self.data_path = os.path.join(data_root, 'scannet_train_detection_data_22')  # random
+                print(self.data_path)
         # logger.info(f"length of testing dataset: {self.data_path}")
             # self.data_path = '/mnt/sda/szh/scannet/scans'
         all_scan_names = list(set([os.path.basename(x)[0:12] \
